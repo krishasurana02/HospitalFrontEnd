@@ -1,0 +1,16 @@
+.card {
+    background-color: #c1f5f7;
+    border: 3px solid black;
+    padding: auto;
+    border-radius: 50px 20px;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.container {
+    background-color: #FFDCFA;
+    border-radius: 50px 20px;
+    padding: auto;
+}

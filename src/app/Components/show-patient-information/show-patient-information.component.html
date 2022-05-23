@@ -1,0 +1,33 @@
+<div class="col-md-6 offset-md-3 p-3">
+    <h3> Show Patient </h3><br>
+    <!-- <label> Select Patient</label>
+    <div>
+        <select name="patients" class="p-2" [(ngModel)]="selectedPatient">
+            <option placeholder selected> Select Patient </option>
+            <option *ngFor="let patient of patients" [ngValue]="patient">
+                {{patient.id}}
+            </option>
+        </select>
+    </div> -->
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label> Select Patient </label>
+            <input type="search" class="form-control" id="selectedPatient" [(ngModel)]="selectedPatient"
+                name="selectedPatient">
+        </div>
+        <button class="btn btn-success" type="submit">Submit</button>
+    </form>
+
+
+
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title "> Patient Details </h4>
+            <p class="card-text"><strong> ID : </strong>{{patient.id}}</p>
+            <p class="card-text"><strong> Name : </strong>{{patient.name}}</p>
+            <p class="card-text"><strong> Visited Doctor : </strong>{{patient.visitedDoctor}}</p>
+            <p class="card-text"><strong> Date Of Visit : </strong>{{patient.date_Of_Visit}}</p>
+        </div>
+    </div>
+</div>

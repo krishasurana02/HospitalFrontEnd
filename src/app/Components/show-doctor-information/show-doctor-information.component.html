@@ -1,0 +1,24 @@
+<div class="col-md-6 offset-md-3 p-3">
+    <h3> Show Doctor </h3><br>
+    <label> Select Doctor</label>
+    <div>
+        <select name="doctors" class="p-2" [(ngModel)]="selectedDoctor">
+            <option placeholder selected> Select Doctor </option>
+            <option *ngFor="let doctor of doctors" [ngValue]="doctor">
+                {{doctor.name}}
+            </option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title ">Doctor Details</h4>
+            <p class="card-text"><strong> ID : </strong>{{selectedDoctor.id}}</p>
+            <p class="card-text"><strong> Name : </strong>{{selectedDoctor.name}}</p>
+            <p class="card-text"><strong> Age : </strong>{{selectedDoctor.age}}</p>
+            <p class="card-text"><strong> Specialist : </strong>{{selectedDoctor.specialist}}</p>
+            <p class="card-text"><strong>No. Of Patient : </strong> {{selectedDoctor.noOfPatients}} </p>
+        </div>
+    </div>
+</div>
